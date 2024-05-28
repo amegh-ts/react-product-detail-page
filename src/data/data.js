@@ -1,4 +1,4 @@
-const product = { // Product Data
+export const productData = {
   id: 1,
   name: 'new macbook laptop',
   slug: 'new-luxury-laptop',
