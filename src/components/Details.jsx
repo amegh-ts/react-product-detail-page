@@ -41,6 +41,13 @@ const Details = () => {
                             </div>
                         ))}
                     </div>
+                    <div className="product-page-offer">
+                        <p>{product.discount}% Discount</p>
+                    </div>
+                    <div className="product-sold">
+                        <img src="sold.png" alt="soldIcon" />
+                        <strong>{product.sold} <span>Products Sold</span></strong>
+                    </div>
                 </div>
             </section>
 
