@@ -1,25 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './Details.scss'
 import { productData as product } from '../data/data'
 const Details = () => {
+    const [slideIndex, setSlideIndex] = useState(1)
+
+    const plusSlides = (n) => {
+        setSlideIndex(prev => prev + n);
+        slideShow(slideIndex + n)
+    }
+
+    const slideShow = (n) => {
+        if (n > product.images.length) { setSlideIndex(1) }
+        if (n < 1) { setSlideIndex(product.images.length) }
+    }
+
     return (
         <React.Fragment>
             <section className='product-details'>
                 <div className="product-page-img">
                     {product.images.map((image, index) => (
-                        <div key={index} className='mySlides'>
+                        <div
+                            key={index} className='mySlides'
+                            style={{ display: (index + 1) === slideIndex ? 'block' : 'none' }}
+                        >
                             <div className="numbertext">{index + 1} / {product.images.length}</div>
                             <img src={image.src} alt="" />
                         </div>
                     ))}
 
-                    <a href="#!" className='prev'>&#10094;</a>
-                    <a href="#!" className='next'>&#10095;</a>
+                    <a href="#!" className='prev' onClick={() => plusSlides(-1)} >&#10094;</a>
+                    <a href="#!" className='next' onClick={() => plusSlides(1)} >&#10095;</a>
 
                     <div className="slider-img">
                         {
                             product.images.map((image, index) => (
-                                <div className="slider-box">
+                                <div className={`slider-box ${index + 1 === slideIndex && 'active'}`}>
                                     <img src={image.src} alt="" />
                                 </div>
                             ))
