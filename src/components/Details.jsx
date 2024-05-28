@@ -13,12 +13,12 @@ const Details = () => {
                         </div>
                     ))}
 
-                    <a href="#!" className='prev'>&#10094;</a> 
+                    <a href="#!" className='prev'>&#10094;</a>
                     <a href="#!" className='next'>&#10095;</a>
 
                     <div className="slider-img">
                         {
-                            product.images.map((image,index)=>(
+                            product.images.map((image, index) => (
                                 <div className="slider-box">
                                     <img src={image.src} alt="" />
                                 </div>
@@ -47,6 +47,10 @@ const Details = () => {
                     <div className="product-sold">
                         <img src="sold.png" alt="soldIcon" />
                         <strong>{product.sold} <span>Products Sold</span></strong>
+                    </div>
+                    <div className="cart-btns">
+                        <a href="#!" className='add-cart'>Add to Cart</a>
+                        <a href="#!" className='add-cart buy-now'>Buy Now</a>
                     </div>
                 </div>
             </section>
