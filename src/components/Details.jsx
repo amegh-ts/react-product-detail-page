@@ -12,6 +12,9 @@ const Details = () => {
                             <img src={image.src} alt="" />
                         </div>
                     ))}
+
+                    <a href="#!" className='prev'>&#10094;</a> 
+                    <a href="#!" className='next'>&#10095;</a>
                 </div>
 
                 <div className='product-page-details'>
