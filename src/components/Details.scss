@@ -1,4 +1,4 @@
-.product-details{
+.product-details {
     background: #fff;
     padding: 30px;
     display: grid;
@@ -6,19 +6,19 @@
     gap: 30px;
 }
 
-.product-page-img{
+.product-page-img {
     width: 100%;
     border: 1px solid #eee;
     padding: 5px;
     overflow: hidden;
     position: relative;
 
-    .mySlides{
+    .mySlides {
         width: 100%;
         height: 330px;
         position: relative;
-          
-        .numbertext{
+
+        .numbertext {
             color: #f2f2f2;
             text-shadow: 0 0 4px blue;
             font-size: 12px;
@@ -28,7 +28,7 @@
             left: 0;
         }
 
-        img{
+        img {
             width: 100%;
             height: 100%;
             display: inline-block;
@@ -37,40 +37,45 @@
         }
     }
 
-    .prev, .next{
+    .prev,
+    .next {
         cursor: pointer;
         position: absolute;
         top: 50%;
         // left: 0;
-        transform: translateY( -50%);
+        transform: translateY(-50%);
         width: auto;
         padding: 10px;
         margin-top: -50px;
-        color: white;       
+        color: white;
         font-weight: bold;
         font-size: 20px;
         border-radius: 0 3px 3px 0;
-        user-select: none;        
+        user-select: none;
     }
 
-    .next{
+    .next {
         right: 0;
         border-radius: 3px 0 0 3px;
     }
 
-    .prev:hover, .next:hover{
-        background-color: rgba(0,0,0,0.8);
+    .prev:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
-
-    .slider-img{
+    .slider-img {
         width: 100%;
         height: 50px;
         overflow-x: scroll;
         display: flex;
         user-select: none;
 
-        .slider-box{
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-box {
             width: 50px;
             height: 50px;
             min-width: 50px;
@@ -78,13 +83,24 @@
             overflow: hidden;
             border: 1px solid #ddd;
             padding: 2px;
+            opacity: 0.6;
 
-            img{
+            img {
                 width: 100%;
                 height: 100%;
                 display: inline-block;
                 object-fit: cover;
             }
+
+            &:hover {
+                border: 2px solid teal;
+                opacity: 1;
+            }
+        }
+
+        .slider-box.active {
+            border: 2px solid crimson;
+            opacity: 1;
         }
     }
 }
