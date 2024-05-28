@@ -3,4 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #f9f9f9;
+    background-image: url('bg.png');
+    background-size: 350px;
+    background-position: center;
 }
