@@ -5,8 +5,16 @@ const Details = () => {
     const [slideIndex, setSlideIndex] = useState(1)
     const [width, setWidth] = useState(0)
     const [start, setStart] = useState(0)
-    const [change, setChange] = useState(0)
+    const [change, setChange] = useState(9)
     const slideRef = useRef();
+
+    useEffect(() => {
+        if(!slideRef.current) return;
+        const scrollWidth = slideRef.current.scrollWidth;
+        const childrenElementCount=slideRef.current.childElementCount;
+        const width = scrollWidth / childrenElementCount;
+        setWidth(width);
+    }, [])
 
     const plusSlides = (n) => {
         setSlideIndex(prev => prev + n);
@@ -20,11 +28,31 @@ const Details = () => {
 
     //  drag
 
-    const dragStart = (e) => { }
+    const dragStart = (e) => { 
+        setStart(e.clientX)
+    }
 
-    const draOver = (e) => { }
+    const draOver = (e) => { 
+        let touch = e.clientX;
+        setChange(start - touch);
+    }
 
-    const dragEnd = (e) => { }
+    const dragEnd = (e) => { 
+        // drag left change >0
+        // drag right change >0
+        if(change > 0){
+            slideRef.current.scrollLeft += width
+        }else{
+            slideRef.current.scrollLeft -= width
+        }
+    }
+
+    useEffect(() => {
+        if(!slideRef.current || !width) return;
+        let numOfThumb=Math.round(slideRef.current.offsetWidth/width);
+        slideRef.current.scrollLeft = slideIndex > numOfThumb ? (slideIndex-1) * width : 0
+    }, [width, slideIndex])
+
 
     return (
         <React.Fragment>
