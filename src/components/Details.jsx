@@ -3,7 +3,10 @@ import './Details.scss'
 import { productData as product } from '../data/data'
 const Details = () => {
     const [slideIndex, setSlideIndex] = useState(1)
-    const slideRef= useRef();
+    const [width, setWidth] = useState(0)
+    const [start, setStart] = useState(0)
+    const [change, setChange] = useState(0)
+    const slideRef = useRef();
 
     const plusSlides = (n) => {
         setSlideIndex(prev => prev + n);
@@ -14,6 +17,14 @@ const Details = () => {
         if (n > product.images.length) { setSlideIndex(1) }
         if (n < 1) { setSlideIndex(product.images.length) }
     }
+
+    //  drag
+
+    const dragStart = (e) => { }
+
+    const draOver = (e) => { }
+
+    const dragEnd = (e) => { }
 
     return (
         <React.Fragment>
@@ -38,7 +49,7 @@ const Details = () => {
                         {
                             product.images.map((image, index) => (
                                 <div className={`slider-box ${index + 1 === slideIndex && 'active'}`}
-                                    onClick={()=> setSlideIndex(index + 1)}
+                                    onClick={() => setSlideIndex(index + 1)}
                                 >
                                     <img src={image.src} alt="" />
                                 </div>
