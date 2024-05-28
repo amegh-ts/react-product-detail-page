@@ -1,0 +1,28 @@
+.product-details{
+    background: #fff;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+}
+
+.product-page-img{
+    border: 1px solid #eee;
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+
+    .mySlides{
+        position: relative;
+          
+        .numbertext{
+            color: #f2f2f2;
+            text-shadow: 0 0 4px blue;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
