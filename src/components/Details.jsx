@@ -3,6 +3,7 @@ import './Details.scss'
 import { productData as product } from '../data/data'
 const Details = () => {
     const [slideIndex, setSlideIndex] = useState(1)
+    const slideRef= useRef();
 
     const plusSlides = (n) => {
         setSlideIndex(prev => prev + n);
@@ -31,10 +32,14 @@ const Details = () => {
                     <a href="#!" className='prev' onClick={() => plusSlides(-1)} >&#10094;</a>
                     <a href="#!" className='next' onClick={() => plusSlides(1)} >&#10095;</a>
 
-                    <div className="slider-img">
+                    <div className="slider-img" draggable={true} ref={slideRef}
+                        onDragStart={dragStart} onDragOver={draOver} onDragEnd={dragEnd}
+                    >
                         {
                             product.images.map((image, index) => (
-                                <div className={`slider-box ${index + 1 === slideIndex && 'active'}`}>
+                                <div className={`slider-box ${index + 1 === slideIndex && 'active'}`}
+                                    onClick={()=> setSlideIndex(index + 1)}
+                                >
                                     <img src={image.src} alt="" />
                                 </div>
                             ))
