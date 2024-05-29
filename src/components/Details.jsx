@@ -63,18 +63,20 @@ const Details = () => {
         <React.Fragment>
             <section className='product-details'>
                 <div className="product-page-img">
-                    {product.images.map((image, index) => (
-                        <div
-                            key={index} className='mySlides'
-                            style={{ display: (index + 1) === slideIndex ? 'block' : 'none' }}
-                        >
-                            <div className="numbertext">{index + 1} / {product.images.length}</div>
-                            <img src={image.src} alt="" />
-                        </div>
-                    ))}
+                    <div className="big-images">
+                        {product.images.map((image, index) => (
+                            <div
+                                key={index} className='mySlides'
+                                style={{ display: (index + 1) === slideIndex ? 'block' : 'none' }}
+                            >
+                                <div className="numbertext">{index + 1} / {product.images.length}</div>
+                                <img src={image.src} alt="" />
+                            </div>
+                        ))}
+                        <a href="#!" className='prev' onClick={() => plusSlides(-1)} >&#10094;</a>
+                        <a href="#!" className='next' onClick={() => plusSlides(1)} >&#10095;</a>
+                    </div>
 
-                    <a href="#!" className='prev' onClick={() => plusSlides(-1)} >&#10094;</a>
-                    <a href="#!" className='next' onClick={() => plusSlides(1)} >&#10095;</a>
 
                     <div className="slider-img" draggable={true} ref={slideRef}
                         onDragStart={dragStart} onDragOver={draOver} onDragEnd={dragEnd}
