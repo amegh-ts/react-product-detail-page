@@ -24,3 +24,19 @@ To get a local copy up and running, follow these simple steps:
 1. **Clone the repository**
    ```sh
    git clone https://github.com/yourusername/ecommerce-product-detail.git
+
+2. **Navigate to the project directory**
+   ```sh
+   cd ecommerce-product-detail
+
+3. **Install dependencies**
+   ```sh
+   npm install
+
+## Usage
+
+To start the development server, run:
+
+   ```sh
+   npm run dev
+
