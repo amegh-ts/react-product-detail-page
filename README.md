@@ -41,10 +41,25 @@ To start the development server, run:
    ```sh
    npm run dev
 
-
 This will run the app in the development mode.
 Open http://localhost:5173 to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
+## Folder Structure
+ecommerce-product-detail/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── ProductDetail.jsx
+│   │   ├── ImageGallery.jsx
+│   │   ├── AddToCartButton.jsx
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+└── README.md
