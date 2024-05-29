@@ -6,12 +6,14 @@ const Details = () => {
     const [width, setWidth] = useState(0)
     const [start, setStart] = useState(0)
     const [change, setChange] = useState(9)
+    const [selectedColor, setSelectedColor] = useState(product.colors[0])
+
     const slideRef = useRef();
 
     useEffect(() => {
-        if(!slideRef.current) return;
+        if (!slideRef.current) return;
         const scrollWidth = slideRef.current.scrollWidth;
-        const childrenElementCount=slideRef.current.childElementCount;
+        const childrenElementCount = slideRef.current.childElementCount;
         const width = scrollWidth / childrenElementCount;
         setWidth(width);
     }, [])
@@ -28,29 +30,29 @@ const Details = () => {
 
     //  drag
 
-    const dragStart = (e) => { 
+    const dragStart = (e) => {
         setStart(e.clientX)
     }
 
-    const draOver = (e) => { 
+    const draOver = (e) => {
         let touch = e.clientX;
         setChange(start - touch);
     }
 
-    const dragEnd = (e) => { 
+    const dragEnd = (e) => {
         // drag left change >0
         // drag right change >0
-        if(change > 0){
+        if (change > 0) {
             slideRef.current.scrollLeft += width
-        }else{
+        } else {
             slideRef.current.scrollLeft -= width
         }
     }
 
     useEffect(() => {
-        if(!slideRef.current || !width) return;
-        let numOfThumb=Math.round(slideRef.current.offsetWidth/width);
-        slideRef.current.scrollLeft = slideIndex > numOfThumb ? (slideIndex-1) * width : 0
+        if (!slideRef.current || !width) return;
+        let numOfThumb = Math.round(slideRef.current.offsetWidth / width);
+        slideRef.current.scrollLeft = slideIndex > numOfThumb ? (slideIndex - 1) * width : 0
     }, [width, slideIndex])
 
 
@@ -76,7 +78,7 @@ const Details = () => {
                     >
                         {
                             product.images.map((image, index) => (
-                                <div className={`slider-box ${index + 1 === slideIndex && 'active'}`}
+                                <div className={`slider-box ${index + 1 === slideIndex ? 'active' : ''}`}
                                     onClick={() => setSlideIndex(index + 1)}
                                 >
                                     <img src={image.src} alt="" />
@@ -94,9 +96,13 @@ const Details = () => {
                     </p>
                     <p className="small-desc">{product.desc}</p>
                     <div className="product-options">
+                        <span>Colors</span>
                         {product.colors.map(color => (
-                            <div key={color}>
-                                <button></button>
+                            <div key={color} >
+                                <button
+                                    style={{ backgroundColor: color }}
+                                    className={color === selectedColor ? 'active' : ''}
+                                />
                             </div>
                         ))}
                     </div>
