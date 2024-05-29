@@ -102,6 +102,7 @@ const Details = () => {
                                 <button
                                     style={{ backgroundColor: color }}
                                     className={color === selectedColor ? 'active' : ''}
+                                    onClick={() => setSelectedColor(color)}
                                 />
                             </div>
                         ))}
