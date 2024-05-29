@@ -63,3 +63,10 @@ react-product-detail-page/
 │   └── ...
 ├── package.json
 └── README.md
+
+
+## License
+Distributed under the MIT License. See LICENSE for more information.
+
+## Contact
+Your Name - @Kratos - amegh2002@gmail.com
