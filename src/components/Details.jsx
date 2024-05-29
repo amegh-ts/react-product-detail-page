@@ -137,7 +137,7 @@ const Details = () => {
                     ))}
                 </ul>
                 {product.infos.map(info => (
-                    <div key={info.title} className='info-container'>
+                    <div key={info.title} className={`info-container ${info.title === infoTitle ? 'active' : ''}`}>
                         {info.content}
                     </div>
                 ))}
