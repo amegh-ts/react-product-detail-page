@@ -23,11 +23,11 @@ To get a local copy up and running, follow these simple steps:
 
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/yourusername/ecommerce-product-detail.git
+   git clone https://github.com/amegh-ts/react-product-detail-page.git
 
 2. **Navigate to the project directory**
    ```sh
-   cd ecommerce-product-detail
+   cd react-product-detail-page
 
 3. **Install dependencies**
    ```sh
@@ -48,7 +48,7 @@ The page will reload when you make changes.
 You may also see any lint errors in the console.
 
 ## Folder Structure
-ecommerce-product-detail/
+react-product-detail-page/
 ├── public/
 │   ├── index.html
 │   └── ...
