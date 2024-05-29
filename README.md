@@ -49,4 +49,4 @@ You may also see any lint errors in the console.
 Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
-Your Name - @Kratos - amegh2002@gmail.com
+Your Name - @Amegh - amegh2002@gmail.com
