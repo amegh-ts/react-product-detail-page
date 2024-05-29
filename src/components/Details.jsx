@@ -57,6 +57,8 @@ const Details = () => {
     }, [width, slideIndex])
 
 
+
+
     return (
         <React.Fragment>
             <section className='product-details'>
@@ -127,14 +129,15 @@ const Details = () => {
                     {product.infos.map(info => (
                         <li
                             key={info.title}
-                            className={`p-info-list active ${info.title === infoTitle ? 'active' : ''}`}
+                            onClick={() => setInfoTitle(info.title)}
+                            className={`p-info-list ${info.title === infoTitle ? 'active' : ''}`}
                         >
                             {info.title}
                         </li>
                     ))}
                 </ul>
                 {product.infos.map(info => (
-                    <div className='info-container'>
+                    <div key={info.title} className='info-container'>
                         {info.content}
                     </div>
                 ))}
