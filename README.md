@@ -37,8 +37,10 @@ To get a local copy up and running, follow these simple steps:
 
 To start the development server, run:
 
+4. **Development Server**
    ```sh
    npm run dev
+
 
 This will run the app in the development mode.
 Open http://localhost:5173 to view it in your browser.
