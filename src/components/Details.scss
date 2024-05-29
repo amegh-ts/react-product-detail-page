@@ -214,6 +214,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-top: 15px;
+            gap: 10px;
 
             .add-cart{
                 background: #333;
@@ -227,7 +228,9 @@
                 font-size: 0.9rem;
             }
 
-            .buy-now{}
+            .buy-now{
+                background: crimson;
+            }
         }
     }
 }
