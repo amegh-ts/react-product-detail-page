@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className='container'>
-      <Breadcrumb />
+      {/* <Breadcrumb /> */}
       <Details />
     </div>
   )
