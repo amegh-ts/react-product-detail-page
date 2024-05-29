@@ -6,16 +6,14 @@ This project is a component of an e-commerce application, specifically focusing 
 
 - **Product Information Display**: Showcases detailed information about the product including images, descriptions, prices, and specifications.
 - **Image Gallery**: Allows users to browse through multiple product images.
-- **Add to Cart Functionality**: Users can add products to their shopping cart.
 - **Responsive Design**: Optimized for various screen sizes, providing a good user experience on both desktop and mobile devices.
-- **Reviews and Ratings**: Displays customer reviews and ratings for the product.
 
 ## Technologies Used
 
 - **ReactJS**: A JavaScript library for building user interfaces.
 - **React Router**: For handling navigation within the application.
 - **Axios**: For making HTTP requests to fetch product data from an API.
-- **CSS Modules**: For styling the components with scoped CSS.
+- **SCSS Modules**: For styling the components with scoped CSS.
 
 ## Installation
 
@@ -46,23 +44,6 @@ Open http://localhost:5173 to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
-<!-- 
-## Folder Structure
-react-product-detail-page/
-├── public/
-│   ├── index.html
-│   └── ...
-├── src/
-│   ├── components/
-│   │   ├── ProductDetail.jsx
-│   │   ├── ImageGallery.jsx
-│   │   ├── AddToCartButton.jsx
-│   │   └── ...
-│   ├── App.js
-│   ├── index.js
-│   └── ...
-├── package.json
-└── README.md -->
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
