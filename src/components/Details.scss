@@ -177,5 +177,57 @@
                 border: 2px solid crimson;
             }
         }
+
+        .product-page-offer{
+            display: inline-block;
+            color: #fff;
+            font-size: .8rem;
+            padding: 4px 10px;
+            border-radius: 10px;
+            background: #ec1111;
+            margin-top: 10px;
+        
+            i{
+                margin-right: 3px;
+            }
+        }
+
+        .product-sold{
+            margin-top: 15px;
+            display: flex;
+            align-items: center;
+
+            img{
+                width: 30px;
+            }
+
+            span{
+                font-size: 0.9rem;
+                text-transform: capitalize;
+                color: crimson;
+                font-weight: 500;
+            }
+        }
+
+        .cart-btns{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 15px;
+
+            .add-cart{
+                background: #333;
+                color: #fff;
+                width: 150px;
+                height: 40px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.9rem;
+            }
+
+            .buy-now{}
+        }
     }
 }
