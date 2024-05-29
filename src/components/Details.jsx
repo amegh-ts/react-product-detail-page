@@ -7,6 +7,7 @@ const Details = () => {
     const [start, setStart] = useState(0)
     const [change, setChange] = useState(9)
     const [selectedColor, setSelectedColor] = useState(product.colors[0])
+    const [infoTitle, setInfoTitle] = useState(product.infos[0].title)
 
     const slideRef = useRef();
 
@@ -122,18 +123,21 @@ const Details = () => {
             </section>
 
             <section className="product-all-info">
-                    <ul className="product-info-menu">
-                        {product.infos.map(info=>(
-                            <li key={info.title} className='p-info-list'>
-                                {info.title}
-                            </li>
-                        ))}
-                    </ul>
-                        {product.infos.map(info=>(
-                            <div className='info-container'>
-                                {info.content}
-                            </div>
-                        ))}
+                <ul className="product-info-menu">
+                    {product.infos.map(info => (
+                        <li
+                            key={info.title}
+                            className={`p-info-list active ${info.title === infoTitle ? 'active' : ''}`}
+                        >
+                            {info.title}
+                        </li>
+                    ))}
+                </ul>
+                {product.infos.map(info => (
+                    <div className='info-container'>
+                        {info.content}
+                    </div>
+                ))}
             </section>
         </React.Fragment>
     )
