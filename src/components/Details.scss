@@ -152,6 +152,30 @@
             justify-content: flex-start;
             align-items: center;
             margin: 20px 0 0;
+
+            span{
+                font-size: 1rem;
+                color: #1f1f1f;
+                font-weight: 600;
+                margin-right: 7px;
+            }
+
+            button{
+                width: 25px;
+                height: 25px;
+                border: 2px solid #ddd;
+                outline: none;
+                border-radius: 50%;
+                cursor: pointer;
+                overflow: hidden;
+                margin-right: 5px;
+                display: flex;
+                justify-content: center;
+            }
+
+            button.active{
+                border: 2px solid crimson;
+            }
         }
     }
 }
