@@ -46,7 +46,7 @@ Open http://localhost:5173 to view it in your browser.
 
 The page will reload when you make changes.
 You may also see any lint errors in the console.
-
+<!-- 
 ## Folder Structure
 react-product-detail-page/
 ├── public/
@@ -62,8 +62,7 @@ react-product-detail-page/
 │   ├── index.js
 │   └── ...
 ├── package.json
-└── README.md
-
+└── README.md -->
 
 ## License
 Distributed under the MIT License. See LICENSE for more information.
