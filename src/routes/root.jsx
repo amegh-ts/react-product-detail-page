@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-// import Header from "../components/Header";
 // import Footer from "../pages/Footer/Footer";
 import { useEffect, useState } from "react";
+import Header from "../components/navbar/header";
 // import { IoArrowUpCircleSharp } from 'react-icons/io5';
 
 export default function Root() {
@@ -29,7 +29,7 @@ export default function Root() {
   return (
     <>
     <div>
-      {/* <Header /> */}
+      <Header />
       <div className="content">
         <Outlet />
       </div>
